@@ -1,9 +1,9 @@
 FROM php:8.2-apache
 
-# Installa estensioni necessarie
+# Installa estensione MySQL o PostgreSQL
 RUN docker-php-ext-install mysqli
 
-# Copia i file nel container
+# Copia i file PHP nel container
 COPY ./backend/ /var/www/html/
 
 # Abilita mod_rewrite se serve
